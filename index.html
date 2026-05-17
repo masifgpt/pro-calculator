@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoCalc // Professional Precision Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="calculator-wrapper">
+        <!-- Header Controls -->
+        <div class="calc-header">
+            <div class="calc-logo">
+                <i class="fa-solid fa-calculator"></i>
+                <span>NeoCalc</span>
+            </div>
+            <div class="header-actions">
+                <button id="history-toggle" title="View History">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+                <button id="theme-toggle" title="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Display Section -->
+        <div class="display-area">
+            <div id="upper-display" class="expression"></div>
+            <div id="main-display" class="result">0</div>
+        </div>
+
+        <!-- Keypad -->
+        <div class="keypad">
+            <!-- Row 1 -->
+            <button class="btn btn-secondary" data-action="clear">AC</button>
+            <button class="btn btn-secondary" data-action="delete"><i class="fa-solid fa-backspace"></i></button>
+            <button class="btn btn-secondary" data-operator="%">%</button>
+            <button class="btn btn-accent" data-operator="/">÷</button>
+
+            <!-- Row 2 -->
+            <button class="btn btn-number" data-number="7">7</button>
+            <button class="btn btn-number" data-number="8">8</button>
+            <button class="btn btn-number" data-number="9">9</button>
+            <button class="btn btn-accent" data-operator="*">×</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-number" data-number="4">4</button>
+            <button class="btn btn-number" data-number="5">5</button>
+            <button class="btn btn-number" data-number="6">6</button>
+            <button class="btn btn-accent" data-operator="-">−</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-number" data-number="1">1</button>
+            <button class="btn btn-number" data-number="2">2</button>
+            <button class="btn btn-number" data-number="3">3</button>
+            <button class="btn btn-accent" data-operator="+">+</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-number" data-number="0">0</button>
+            <button class="btn btn-number" data-number=".">.</button>
+            <button class="btn btn-number btn-sqrt" data-action="sqrt">√</button>
+            <button class="btn btn-equal" id="equals">=</button>
+        </div>
+
+        <!-- History Panel -->
+        <div id="history-panel" class="history-panel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button id="clear-history">Clear</button>
+            </div>
+            <ul id="history-list">
+                <!-- History items added here -->
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Advanced Precision &bull; 2024 NeoCalc Studio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
